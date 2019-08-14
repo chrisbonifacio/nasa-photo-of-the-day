@@ -29,7 +29,7 @@ const PhotoCard = props => {
       <Calendar setPhotoDate={setPhotoDate} />
       <div className="photo-card">
         <div className="photo-image">
-          <img src={photo} alt="{title}" />
+          <img src={photo} alt={title} />
           <h1>{title}</h1>
           <p className="photo-date">{photoDate}</p>
           <p className="photo-desc">{description}</p>

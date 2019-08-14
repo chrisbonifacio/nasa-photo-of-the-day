@@ -3,6 +3,7 @@ import { DatePicker } from "@material-ui/pickers";
 
 const StaticDatePicker = () => {
   const [date, changeDate] = useState(new Date());
+  console.log(date);
 
   // prettier-ignore
   return (

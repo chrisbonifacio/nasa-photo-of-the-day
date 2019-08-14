@@ -17,6 +17,13 @@ const Calendar = props => {
       >
         Change Date
       </button>
+      <button
+        onClick={() => {
+          props.setPhotoDate("2012-03-14");
+        }}
+      >
+        Change Date
+      </button>
     </div>
   );
 };
