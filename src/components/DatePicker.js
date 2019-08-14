@@ -7,13 +7,13 @@ const StaticDatePicker = () => {
   // prettier-ignore
   return (
     <>
-      <DatePicker
+      {/* <DatePicker
         autoOk
         variant="static"
         openTo="year"
         value={date}
         onChange={changeDate}
-      />
+      /> */}
 
       <DatePicker
         autoOk
