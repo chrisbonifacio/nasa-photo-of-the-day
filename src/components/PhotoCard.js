@@ -31,6 +31,10 @@ const Content = styled.div`
   padding: 0 1rem;
 `;
 
+const Description = styled.p`
+  line-height: 1.5;
+`;
+
 const Title = styled.h1`
   color: #000;
   margin: 1rem 0;
@@ -55,7 +59,6 @@ const PhotoCard = () => {
         `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${photoDate}`
       )
       .then(response => {
-        console.log(response);
         const data = response.data;
 
         setPhoto(data.url);
@@ -67,7 +70,7 @@ const PhotoCard = () => {
           setMediaType("img");
         }
       });
-  }, [photoDate, mediaType]);
+  }, [photoDate]);
 
   return (
     <>
@@ -85,8 +88,8 @@ const PhotoCard = () => {
         </Row>
         <Content>
           <Title>{title}</Title>
-          <Date className="photo-date">{photoDate}</Date>
-          <p className="photo-desc">{description}</p>
+          <Date>{photoDate}</Date>
+          <Description>{description}</Description>
         </Content>
       </Card>
       }
