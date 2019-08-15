@@ -3,6 +3,8 @@ import axios from "axios";
 import DateButtons from "./DateButtons";
 import Calendar from "./Calendar";
 import styled from "styled-components";
+import { makeStyles } from "@material-ui/core/styles";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const Card = styled.div`
   background: rgba(255, 255, 255, 0.8);
@@ -44,6 +46,7 @@ const PhotoCard = () => {
   const [photo, setPhoto] = useState("");
   const [title, setTitle] = useState("");
   const [photoDate, setPhotoDate] = useState("");
+  const [mediaType, setMediaType] = useState("img");
   const [description, setDescription] = useState("");
 
   useEffect(() => {
@@ -54,11 +57,17 @@ const PhotoCard = () => {
       .then(response => {
         console.log(response);
         const data = response.data;
+
         setPhoto(data.url);
         setTitle(data.title);
         setDescription(data.explanation);
+        if (data.media_type === "video") {
+          setMediaType("iframe");
+        } else {
+          setMediaType("img");
+        }
       });
-  }, [photoDate]);
+  }, [photoDate, mediaType]);
 
   return (
     <>
@@ -66,7 +75,13 @@ const PhotoCard = () => {
       <Card>
         <Row>
           <Calendar photoDate={photoDate} setPhotoDate={setPhotoDate} />
-          <Photo src={photo} alt={title} />
+          <CardMedia
+            src={photo}
+            image={photo}
+            component={mediaType}
+            alt={title}
+          />
+          {/* <Photo src={photo} alt={title} /> */}
         </Row>
         <Content>
           <Title>{title}</Title>
@@ -74,6 +89,7 @@ const PhotoCard = () => {
           <p className="photo-desc">{description}</p>
         </Content>
       </Card>
+      }
     </>
   );
 };

@@ -4,8 +4,6 @@ import { DatePicker } from "@material-ui/pickers";
 import MomentUtils from "@date-io/moment";
 
 const Calendar = props => {
-  console.log(props.photoDate);
-
   function changeDate(date) {
     props.setPhotoDate(date.toISOString().split("T")[0]);
   }

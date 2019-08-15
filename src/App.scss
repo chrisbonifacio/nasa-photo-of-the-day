@@ -51,3 +51,8 @@ body {
 .MuiPickersBasePicker-containerLandscape {
   height: 550px;
 }
+
+.MuiCardMedia-root {
+  width: 57% !important;
+  max-height: 550px;
+}

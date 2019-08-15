@@ -7,15 +7,12 @@ function App() {
   const Container = styled.div`
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-
-    display: flex;
-    flex-direction: column;
     width: 980px;
-    margin: 5em auto;
+    margin: 2em auto;
   `;
 
   const Title = styled.h1`
-    color: #000;
+    color: #fff;
     margin: 1rem 0;
     padding-left: 1.5rem;
   `;
