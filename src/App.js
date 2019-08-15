@@ -1,20 +1,30 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import PhotoCard from "./components/PhotoCard";
-import DatePicker from "./components/DatePicker";
-import { MuiPickersUtilsProvider } from "@material-ui/pickers";
-import DateFnsUtils from "@date-io/date-fns";
+import styled from "styled-components";
 
 function App() {
+  const Container = styled.div`
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+    width: 980px;
+    margin: 5em auto;
+  `;
+
+  const Title = styled.h1`
+    color: #000;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  `;
+
   return (
-    <div className="App">
-      {/* Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀! */}
-      <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <DatePicker />
-      </MuiPickersUtilsProvider>
+    <Container>
+      <Title>Photo of the Day</Title>
       <PhotoCard />
-    </div>
+    </Container>
   );
 }
 

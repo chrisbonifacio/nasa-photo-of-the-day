@@ -1,30 +1,37 @@
 import React from "react";
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import { DatePicker } from "@material-ui/pickers";
+import MomentUtils from "@date-io/moment";
 
 const Calendar = props => {
+  console.log(props.photoDate);
+
+  function changeDate(date) {
+    props.setPhotoDate(date.toISOString().split("T")[0]);
+  }
+
+  // prettier-ignore
   return (
-    <div className="date-picker">
-      <button
-        onClick={() => {
-          props.setPhotoDate("2012-01-06");
-        }}
-      >
-        Change Date
-      </button>
-      <button
-        onClick={() => {
-          props.setPhotoDate("2015-01-06");
-        }}
-      >
-        Change Date
-      </button>
-      <button
-        onClick={() => {
-          props.setPhotoDate("2012-03-14");
-        }}
-      >
-        Change Date
-      </button>
-    </div>
+    <>
+      {/* <DatePicker
+        autoOk
+        variant="static"
+        openTo="year"
+        value={date}
+        onChange={changeDate}
+      /> */}
+
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+        <DatePicker
+          autoOk
+          orientation="landscape"
+          variant="static"
+          openTo="date"
+          value={props.photoDate}
+          onChange={changeDate}
+        />
+      </MuiPickersUtilsProvider>
+    </>
   );
 };
 
