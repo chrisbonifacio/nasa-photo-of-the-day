@@ -13,13 +13,6 @@ const Calendar = props => {
   // prettier-ignore
   return (
     <>
-      {/* <DatePicker
-        autoOk
-        variant="static"
-        openTo="year"
-        value={date}
-        onChange={changeDate}
-      /> */}
 
       <MuiPickersUtilsProvider utils={MomentUtils}>
         <DatePicker

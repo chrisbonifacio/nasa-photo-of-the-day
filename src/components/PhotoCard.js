@@ -84,7 +84,6 @@ const PhotoCard = () => {
             component={mediaType}
             alt={title}
           />
-          {/* <Photo src={photo} alt={title} /> */}
         </Row>
         <Content>
           <Title>{title}</Title>
@@ -92,7 +91,6 @@ const PhotoCard = () => {
           <Description>{description}</Description>
         </Content>
       </Card>
-      }
     </>
   );
 };
