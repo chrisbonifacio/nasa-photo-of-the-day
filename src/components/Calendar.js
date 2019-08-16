@@ -5,9 +5,7 @@ import MomentUtils from "@date-io/moment";
 
 const Calendar = props => {
   function changeDate(date) {
-    console.log(props.photoDate);
     props.setPhotoDate(date.toISOString().split("T")[0]);
-    console.log(props.photoDate);
   }
 
   // prettier-ignore

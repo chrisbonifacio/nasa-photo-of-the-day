@@ -17,7 +17,7 @@ body {
   min-width: 43% !important;
   background: none !important;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     width: 100% !important;
   }
 }
@@ -25,17 +25,16 @@ body {
 .MuiPickersBasePicker-containerLandscape {
   height: 550px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     height: auto;
   }
 }
 
 .MuiPickersBasePicker-pickerView {
   width: 100%;
-  min-width: none;
-  max-width: none;
+  max-width: none !important;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     max-width: none !important;
   }
 }
@@ -44,7 +43,7 @@ body {
   width: 58% !important;
   max-height: 550px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     width: 100% !important;
   }
 }
