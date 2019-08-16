@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80");
+}
+
+.App {
+  text-align: center;
+}
+
+.MuiPickersStaticWrapper-staticWrapperRoot {
+  display: flex;
+  min-width: 43% !important;
+  background: none !important;
+
+  @media screen and (max-width: 800px) {
+    width: 100% !important;
+  }
+}
+
+.MuiPickersBasePicker-containerLandscape {
+  height: 550px;
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+  }
+}
+
+.MuiPickersBasePicker-pickerView {
+  width: 100%;
+  max-width: none !important;
+
+  @media screen and (max-width: 800px) {
+    max-width: none !important;
+  }
+}
+
+.MuiCardMedia-root {
+  width: 58% !important;
+  max-height: 550px;
+
+  @media screen and (max-width: 800px) {
+    width: 100% !important;
+  }
+}
