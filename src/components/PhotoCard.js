@@ -38,11 +38,18 @@ const Content = styled.div`
 
 const Description = styled.p`
   line-height: 1.5;
+
+  @media screen and (max-width: 500px) {
+  }
 `;
 
 const Title = styled.h1`
   color: #000;
   margin: 1rem 0;
+
+  @media screen and (max-width: 500px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const Date = styled.p`

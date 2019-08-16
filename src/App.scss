@@ -16,6 +16,10 @@ body {
   display: flex;
   min-width: 43% !important;
   background: none !important;
+
+  @media screen and (max-width: 500px) {
+    width: 100% !important;
+  }
 }
 
 .MuiPickersBasePicker-containerLandscape {
@@ -30,6 +34,10 @@ body {
   width: 100%;
   min-width: none;
   max-width: none;
+
+  @media screen and (max-width: 500px) {
+    max-width: none !important;
+  }
 }
 
 .MuiCardMedia-root {
