@@ -17,7 +17,7 @@ const Calendar = props => {
       <MuiPickersUtilsProvider utils={MomentUtils}>
         <DatePicker
           autoOk
-          orientation="landscape"
+          orientation="portrait"
           variant="static"
           openTo="date"
           value={props.photoDate}

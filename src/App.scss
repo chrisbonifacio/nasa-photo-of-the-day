@@ -20,9 +20,23 @@ body {
 
 .MuiPickersBasePicker-containerLandscape {
   height: 550px;
+
+  @media screen and (max-width: 500px) {
+    height: auto;
+  }
+}
+
+.MuiPickersBasePicker-pickerView {
+  width: 100%;
+  min-width: none;
+  max-width: none;
 }
 
 .MuiCardMedia-root {
-  width: 57% !important;
+  width: 58% !important;
   max-height: 550px;
+
+  @media screen and (max-width: 500px) {
+    width: 100% !important;
+  }
 }

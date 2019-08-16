@@ -13,12 +13,17 @@ const Card = styled.div`
   max-width: 980px;
   margin: 0 auto;
   padding: 0 0 1.5rem;
+  overflow: hidden;
 `;
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Photo = styled.img`
